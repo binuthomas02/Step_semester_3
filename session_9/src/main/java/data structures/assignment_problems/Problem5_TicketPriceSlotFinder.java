@@ -1,12 +1,3 @@
-/**
- * Problem 5: Ticket Price Slot Finder
- *
- * Linear scan:   Time: O(n)       Space: O(1)
- * Binary search (used below): halve the search range each step using the sorted order.
- *   Time: O(log n)   Space: O(1)
- *
- * If the price is not found, the loop ends with 'lo' sitting exactly where it belongs.
- */
 public class Problem5_TicketPriceSlotFinder {
 
     public static int findSlot(int[] prices, int newPrice) {
@@ -22,8 +13,8 @@ public class Problem5_TicketPriceSlotFinder {
 
     public static void main(String[] args) {
         int[] prices = {120, 150, 200, 260};
-        System.out.println(findSlot(prices, 150)); // 1
-        System.out.println(findSlot(prices, 210)); // 3
-        System.out.println(findSlot(prices, 300)); // 4
+        System.out.println(findSlot(prices, 150)); 
+        System.out.println(findSlot(prices, 210)); 
+        System.out.println(findSlot(prices, 300)); 
     }
 }
