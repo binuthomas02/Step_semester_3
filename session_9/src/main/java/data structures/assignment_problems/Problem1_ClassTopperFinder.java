@@ -1,15 +1,4 @@
-/**
- * Problem 1: Class Topper Finder
- *
- * Approach: Outer loop over students, inner loop sums that student's marks.
- * Update the best only when a total is STRICTLY greater, so ties keep the smallest row index.
- *
- * Time complexity : O(m * n)   (m = students, n = subjects)
- * Extra space     : O(1) beyond the input grid
- */
 public class Problem1_ClassTopperFinder {
-
-    /** Returns {rowIndex, total} of the student with the highest total. */
     public static int[] findTopper(int[][] marks) {
         int bestRow = 0, bestTotal = -1;
         for (int i = 0; i < marks.length; i++) {
@@ -32,6 +21,6 @@ public class Problem1_ClassTopperFinder {
             {65, 70, 95}
         };
         int[] res = findTopper(marks);
-        System.out.println("(" + res[0] + ", " + res[1] + ")"); // (1, 259)
+        System.out.println("(" + res[0] + ", " + res[1] + ")"); 
     }
 }
