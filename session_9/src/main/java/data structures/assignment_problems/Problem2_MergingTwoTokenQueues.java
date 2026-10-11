@@ -1,17 +1,4 @@
 import java.util.Arrays;
-
-/**
- * Problem 2: Merging Two Token Queues
- *
- * Approach: Two pointers. Copy the smaller current value and advance that pointer
- * (using <= keeps duplicates, taking from A first on ties). Then copy whatever remains.
- *
- * Time complexity : O(m + n)
- * Space           : O(m + n) for the output list, O(1) extra besides it
- *
- * Compared with "join + sort": that costs O((m + n) log(m + n)) because it ignores the fact
- * that both lists are already sorted. The two-pointer merge is strictly faster.
- */
 public class Problem2_MergingTwoTokenQueues {
 
     public static int[] mergeTokens(int[] counterA, int[] counterB) {
@@ -30,8 +17,8 @@ public class Problem2_MergingTwoTokenQueues {
 
     public static void main(String[] args) {
         System.out.println(Arrays.toString(
-            mergeTokens(new int[]{3, 8, 15, 20}, new int[]{5, 8, 12}))); // [3, 5, 8, 8, 12, 15, 20]
+            mergeTokens(new int[]{3, 8, 15, 20}, new int[]{5, 8, 12}))); 
         System.out.println(Arrays.toString(
-            mergeTokens(new int[]{}, new int[]{4, 9})));                 // [4, 9]
+            mergeTokens(new int[]{}, new int[]{4, 9})));                
     }
 }
